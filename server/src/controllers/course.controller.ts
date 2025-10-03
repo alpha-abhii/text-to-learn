@@ -6,10 +6,16 @@ import Lesson from '../models/Lesson.model';
 import mongoose from 'mongoose';
 
 export const generateCourseController = async (req: Request, res: Response) => {
-    const { topic, userId } = req.body;
+    const { topic } = req.body;
 
-    if (!topic || !userId) {
-        return res.status(400).json({ message: 'Topic and userId are required.' });
+    // if (!topic || !userId) {
+    //     return res.status(400).json({ message: 'Topic and userId are required.' });
+    // }
+
+    const userId = 'placeholder-user'; 
+
+    if (!topic) {
+        return res.status(400).json({ message: 'Topic is required.' });
     }
 
     try {
