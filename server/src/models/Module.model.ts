@@ -13,3 +13,4 @@ const moduleSchema: Schema = new Schema({
 }, { timestamps: true });
 
 export default mongoose.model<IModule>('Module', moduleSchema);
+    
